@@ -1,0 +1,307 @@
+<!DOCTYPE <html>
+    <head>
+		<title>Meu Site!</title>
+        <meta charset="utf-8" />
+        <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+        <link href="css/stylelogin2.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="box">
+            <input class="search-txt" type="text" name="" placeholder="Type to search">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+        <div class="sm">
+            <ul class="lista">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <main class="container">
+            <h2>Login</h2>
+            <form action="">
+                <div class="input-field"> 
+                    <input type="text" name="username" id="username" placeholder="Enter Your Username">
+                    <div class="underline"></div>
+                </div>
+                <div class="input-field"> 
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                    <div class="underline"></div>
+                </div>
+
+                <input type="submit" value="Continue">
+            </form>
+
+            <div class="footer">
+                <span>Or Connect With Social Media</span>
+                <div class="social-fields">
+                    <div class="social-field twitter">
+                        <a href="https://twitter.com/login" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            Sign in with Twitter
+                        </a>
+                    </div>
+                    <div class="social-field facebook">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                            Sign in with Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap');
+        *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            background: linear-gradient(45deg, #0f3057, #00587a, #008891);
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box{
+            position: absolute;
+            top: 50;
+            left: 80%;
+            transform: translate(-50%,-50%);
+            background: #cd5d7d;
+            height: 50px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+
+        .box:hover > .search-txt{
+            width: 240px;
+            padding: 0 6px;
+        }
+
+        .box:hover > .search-btn{
+            background: white;
+        }
+
+        .search-btn{
+            color: black;
+            float: right;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #cd5d7d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+        }
+
+        .search-txt{
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 30px;
+            width: 0px;
+        }
+
+        .lista{
+            vertical-align: bottom;
+            display: inline-block;
+            list-style: none;
+            margin-top: 0 auto;
+        }
+
+        .sm ul{
+            display: flex;
+            justify-content: space-between;
+        } 
+
+        .sm a{
+            display: inline-block;
+            font-size: 40px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: #cd5d7d;
+            margin: 0 16px;
+            transition: .4s linear;
+            position: relative;
+        }
+
+        .sm a::before, .sm a::after{
+            content: '';
+            position: absolute;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            bottom: 30px;
+            transition: .4s linear;
+        }
+
+        .sm a:hover{
+            transform: scale(.8);
+        }
+
+        .sm a:hover::before{
+            border-left: 4px solid;
+            border-right: 4px solid;
+            transform: skewX(20deg);
+        }
+
+        .sm a:hover::after{
+            border-top: 4px solid;
+            border-bottom: 4px solid;
+            transform: skewY(-20deg);
+        }
+        
+
+        main.container{
+            background: white;
+            max-width: 350px;
+            min-height: 40vh;
+            padding: 2rem;
+            box-shadow: 5px 5px 15px rgba(0,0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        main h2{
+            font-weight: 600;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        main h2 ::before{
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 25px;
+            bottom: 3px;
+            left: 0;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #0f3057, #00587a, #008891);
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-field{
+            position: relative;
+        }
+
+        form .input-field:first-child{
+            margin-bottom: 1.5rem;
+        }
+
+        .input-field .underline::before{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: -5px;
+            left: 0;
+            background: rgba(0,0, 0, 0.2);
+        }
+
+        .input-field .underline::after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: -5px;
+            left: 0;
+            background: rgba(0,0, 0, 0.2);
+            transform: scaleX(0);
+            transition: all .3s ease-in-out;
+            transform-origin: left;
+        }
+
+        .input-field input:focus ~ .underline::after{
+            transform: scaleX(1);
+        }
+
+        .input-field input{
+            outline: none;
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.7)
+        }
+
+        .input-field input ::placeholder{
+            color: rgba(0, 0, 0, 0.5)
+        }
+
+        form input[type="submit"]{
+            margin-top: 2rem;
+            padding: 0.4rem;
+            background: linear-gradient(to left, #0f3057, #00587a, #008891);
+            cursor: pointer;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 300;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        form input[type="submit"]:hover{
+            letter-spacing: 0.5px;
+            background: linear-gradient(to right, #0f3057, #00587a, #008891);
+        }
+
+        .footer{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        .footer span{
+            color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .footer .social-field{
+            padding: 0.4rem;
+            border-radius: 4px;
+            width: 100%;  
+            cursor: pointer;  
+            margin-top: 1rem;
+        }
+
+        .footer .social-field a i{
+            margin: 0 0.5rem;
+            width: 15px;
+        }
+
+        .footer .social-field a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer .social-field.twitter{
+            background: linear-gradient(to right, #56a7f2, #468aca);
+        }
+
+        .footer .social-field.facebook{
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+    </style>
+</html>
